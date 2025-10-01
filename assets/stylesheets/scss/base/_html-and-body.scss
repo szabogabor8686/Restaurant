@@ -1,0 +1,13 @@
+@use './color' as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $background-color;
+  max-width: 1400px;
+  margin: auto;
+}
