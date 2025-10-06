@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +9,92 @@ body {
   background-color: #d1c894;
   max-width: 1400px;
   margin: auto;
+}
+
+header {
+  height: 12vh;
+  display: flex;
+  justify-content: space-between;
+  background-color: #9e693d;
+}
+header .hamburger {
+  padding: 1rem;
+  margin-left: 0.2rem;
+  background-color: #9e693d;
+  height: 50px;
+  width: 40px;
+  position: relative;
+  align-self: center;
+}
+header .hamburger span {
+  height: 5px;
+  width: 100%;
+  background-color: #d1c894;
+  border-radius: 25px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s ease;
+}
+header .hamburger span:nth-child(1) {
+  top: 25%;
+}
+header .hamburger span:nth-child(3) {
+  top: 75%;
+}
+header .hamburger.active span {
+  background-color: #d1c894;
+  z-index: 1;
+}
+header .hamburger.active span:nth-child(1) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+header .hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+header .hamburger.active span:nth-child(3) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+header p {
+  align-self: center;
+  font-family: "Italianno", cursive;
+  font-weight: 800;
+  font-size: xx-large;
+  color: #d1c894;
+}
+header .menu-points {
+  background-color: #9e693d;
+  height: 100vh;
+  width: 100%;
+  max-width: 768px;
+  position: fixed;
+  top: 0;
+  left: -450px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 3rem;
+  transition: 0.3s ease;
+}
+header .menu-points.active {
+  left: 0;
+}
+header .menu-points li {
+  list-style: none;
+  margin-top: 4.2rem;
+}
+header .menu-points li a {
+  text-decoration: none;
+  color: #d1c894;
+}
+header .menu-points li:hover {
+  background-color: #d1c894;
+}
+header .menu-points li:hover a {
+  color: #9e693d;
 }
 
 /*# sourceMappingURL=style.css.map */
