@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Italianno&family=Quintessential&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -16,6 +17,7 @@ header {
   display: flex;
   justify-content: space-between;
   background-color: #9e693d;
+  box-shadow: 0px 5px 10px 0px #9e693d;
 }
 header .hamburger {
   padding: 1rem;
@@ -62,8 +64,10 @@ header p {
   align-self: center;
   font-family: "Italianno", cursive;
   font-weight: 800;
-  font-size: xx-large;
+  font-size: 2.5rem;
   color: #d1c894;
+  margin-top: 0.3rem;
+  cursor: pointer;
 }
 header .menu-points {
   background-color: #9e693d;
@@ -72,11 +76,12 @@ header .menu-points {
   max-width: 768px;
   position: fixed;
   top: 0;
-  left: -450px;
+  left: -768px;
   display: flex;
   flex-direction: column;
   text-align: center;
-  font-size: 3rem;
+  font-size: 2.2rem;
+  font-family: "Quintessential", serif;
   transition: 0.3s ease;
 }
 header .menu-points.active {
@@ -95,6 +100,44 @@ header .menu-points li:hover {
 }
 header .menu-points li:hover a {
   color: #9e693d;
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    justify-content: space-around;
+  }
+  header .hamburger {
+    display: none;
+  }
+  header .menu-points {
+    background-color: #d1c894;
+    height: 6vh;
+    width: 100%;
+    max-width: 1400px;
+    position: absolute;
+    top: 12vh;
+    left: auto;
+    font-size: 1.5rem;
+    justify-content: center;
+    box-shadow: 0px 5px 10px 0px #9e693d;
+  }
+  header .menu-points ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  header .menu-points ul li {
+    margin-top: 0;
+  }
+  header .menu-points ul li a {
+    color: #9e693d;
+  }
+  header .menu-points ul li:hover {
+    background-color: #9e693d;
+  }
+  header .menu-points ul li:hover a {
+    color: #d1c894;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

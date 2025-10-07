@@ -5,6 +5,7 @@ header {
   display: flex;
   justify-content: space-between;
   background-color: $title-background-color;
+  box-shadow: 0px 5px 10px 0px $title-background-color;
   .hamburger {
     padding: 1rem;
     margin-left: 0.2rem;
@@ -53,8 +54,10 @@ header {
     align-self: center;
     font-family: $title-font;
     font-weight: 800;
-    font-size: xx-large;
+    font-size: 2.5rem;
     color: $main-background-color;
+    margin-top: 0.3rem;
+    cursor: pointer;
   }
   .menu-points {
     background-color: $title-background-color;
@@ -63,11 +66,12 @@ header {
     max-width: 768px;
     position: fixed;
     top: 0;
-    left: -450px;
+    left: -768px;
     display: flex;
     flex-direction: column;
     text-align: center;
-    font-size: 3rem;
+    font-size: 2.2rem;
+    font-family: $menu-font;
     transition: 0.3s ease;
 
     &.active {
@@ -85,6 +89,46 @@ header {
 
         a {
           color: $title-background-color;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $medium) {
+  header {
+    justify-content: space-around;
+    .hamburger {
+      display: none;
+    }
+    .menu-points {
+      background-color: $main-background-color;
+      height: 6vh;
+      width: 100%;
+      max-width: 1400px;
+      position: absolute;
+      top: 12vh;
+      left: auto;
+      font-size: 1.5rem;
+      justify-content: center;
+      box-shadow: 0px 5px 10px 0px $title-background-color;
+
+      ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        li {
+          margin-top: 0;
+          a {
+            color: $title-background-color;
+          }
+          &:hover {
+            background-color: $title-background-color;
+
+            a {
+              color: $main-background-color;
+            }
+          }
         }
       }
     }
