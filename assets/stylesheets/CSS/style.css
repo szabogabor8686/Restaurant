@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Italianno&family=Quintessential&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +13,17 @@ body {
   margin: auto;
 }
 
+@keyframes scaling-animation {
+  0% {
+    transform: scale(0.1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 header {
   height: 12vh;
   display: flex;
@@ -138,6 +150,34 @@ header .menu-points li:hover a {
   header .menu-points ul li:hover a {
     color: #d1c894;
   }
+}
+#introduction {
+  position: relative;
+  padding: 0.3rem 0.2rem;
+  font-family: "Montserrat", sans-serif;
+  color: #9e693d;
+  display: flex;
+  justify-content: center;
+}
+#introduction h3 {
+  position: absolute;
+  top: 1rem;
+  z-index: 1;
+}
+#introduction img {
+  position: absolute;
+  opacity: 60%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: 0.2rem;
+  animation: scaling-animation 3s cubic-bezier(0.4, 0, 0.18, 1) 100ms 1 alternate;
+}
+#introduction p {
+  z-index: 1;
+  margin-top: 5rem;
+  padding: 1rem 0.3rem;
+  text-align: justify;
 }
 
 /*# sourceMappingURL=style.css.map */

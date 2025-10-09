@@ -1,0 +1,34 @@
+@use '../base/forward' as *;
+
+#introduction {
+  position: relative;
+  padding: 0.3rem 0.2rem;
+  font-family: $text-font;
+  color: $title-background-color;
+  display: flex;
+  justify-content: center;
+
+  h3 {
+    position: absolute;
+    top: 1rem;
+    z-index: 1;
+  }
+
+  img {
+    position: absolute;
+    opacity: 60%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding: 0.2rem;
+    animation: scaling-animation 3s cubic-bezier(0.4, 0, 0.18, 1) 100ms 1
+      alternate;
+  }
+
+  p {
+    z-index: 1;
+    margin-top: 5rem;
+    padding: 1rem 0.3rem;
+    text-align: justify;
+  }
+}
