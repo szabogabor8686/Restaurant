@@ -10,7 +10,7 @@
 
   h3 {
     position: absolute;
-    top: 1rem;
+    top: 2rem;
     z-index: 1;
   }
 
@@ -30,5 +30,17 @@
     margin-top: 5rem;
     padding: 1rem 0.3rem;
     text-align: justify;
+  }
+}
+
+@media screen and (min-width: $large) {
+  #introduction {
+    margin: 6vh 0 0;
+    padding: 0.5rem 0;
+    height: 25dvh;
+
+    img {
+      padding: 0;
+    }
   }
 }

@@ -1,7 +1,7 @@
 @use '../base/forward' as *;
 
 header {
-  height: 12vh;
+  height: 12dvh;
   display: flex;
   justify-content: space-between;
   background-color: $title-background-color;
@@ -61,7 +61,7 @@ header {
   }
   .menu-points {
     background-color: $title-background-color;
-    height: 100vh;
+    height: 100dvh;
     width: 100%;
     max-width: 768px;
     position: fixed;
@@ -95,7 +95,7 @@ header {
   }
 }
 
-@media screen and (min-width: $medium) {
+@media screen and (min-width: $large) {
   header {
     justify-content: space-around;
     .hamburger {
