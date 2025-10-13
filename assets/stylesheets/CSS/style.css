@@ -18,7 +18,7 @@ body {
     transform: scale(0.1);
   }
   50% {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
   100% {
     transform: scale(1);
@@ -26,17 +26,19 @@ body {
 }
 header {
   height: 12dvh;
+  width: 100%;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   background-color: #9e693d;
   box-shadow: 0px 5px 10px 0px #9e693d;
 }
 header .hamburger {
+  height: 50px;
+  width: 40px;
   padding: 1rem;
   margin-left: 0.2rem;
   background-color: #9e693d;
-  height: 50px;
-  width: 40px;
   position: relative;
   align-self: center;
 }
@@ -59,7 +61,7 @@ header .hamburger span:nth-child(3) {
 }
 header .hamburger.active span {
   background-color: #d1c894;
-  z-index: 1;
+  z-index: 999;
 }
 header .hamburger.active span:nth-child(1) {
   top: 50%;
@@ -82,19 +84,21 @@ header p {
   cursor: pointer;
 }
 header .menu-points {
-  background-color: #9e693d;
   height: 100dvh;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: unset;
+  background-color: #9e693d;
   max-width: 768px;
   position: fixed;
   top: 0;
   left: -768px;
-  display: flex;
-  flex-direction: column;
   text-align: center;
   font-size: 2.2rem;
   font-family: "Quintessential", serif;
   transition: 0.3s ease;
+  z-index: 998;
 }
 header .menu-points.active {
   left: 0;
@@ -122,9 +126,9 @@ header .menu-points li:hover a {
     display: none;
   }
   header .menu-points {
-    background-color: #d1c894;
     height: 6vh;
     width: 100%;
+    background-color: #d1c894;
     max-width: 1400px;
     position: absolute;
     top: 12vh;
@@ -152,29 +156,28 @@ header .menu-points li:hover a {
   }
 }
 #introduction {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   position: relative;
   padding: 0.3rem 0.2rem;
   font-family: "Montserrat", sans-serif;
   color: #9e693d;
-  display: flex;
-  justify-content: center;
 }
 #introduction h3 {
   position: absolute;
   top: 2rem;
-  z-index: 1;
 }
 #introduction img {
+  height: 100%;
+  width: 100%;
   position: absolute;
   opacity: 60%;
-  width: 100%;
-  height: 100%;
   object-fit: cover;
-  padding: 0.2rem;
   animation: scaling-animation 3s cubic-bezier(0.4, 0, 0.18, 1) 100ms 1 alternate;
+  z-index: -1;
 }
 #introduction p {
-  z-index: 1;
   margin-top: 5rem;
   padding: 1rem 0.3rem;
   text-align: justify;
@@ -185,9 +188,6 @@ header .menu-points li:hover a {
     margin: 6vh 0 0;
     padding: 0.5rem 0;
     height: 25dvh;
-  }
-  #introduction img {
-    padding: 0;
   }
 }
 
