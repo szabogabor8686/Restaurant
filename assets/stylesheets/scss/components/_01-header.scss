@@ -51,7 +51,7 @@ header {
     align-self: center;
     font-family: $title-font;
     font-weight: 800;
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     color: $main-background-color;
     margin-top: 0.3rem;
     cursor: pointer;
@@ -96,6 +96,10 @@ header {
     justify-content: space-around;
     .hamburger {
       display: none;
+    }
+
+    p {
+      font-size: 3rem;
     }
     .menu-points {
       @include heightAndWidth(6vh);

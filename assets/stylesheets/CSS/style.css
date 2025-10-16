@@ -78,7 +78,7 @@ header p {
   align-self: center;
   font-family: "Italianno", cursive;
   font-weight: 800;
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   color: #d1c894;
   margin-top: 0.3rem;
   cursor: pointer;
@@ -124,6 +124,9 @@ header .menu-points li:hover a {
   }
   header .hamburger {
     display: none;
+  }
+  header p {
+    font-size: 3rem;
   }
   header .menu-points {
     height: 6vh;
@@ -189,6 +192,56 @@ header .menu-points li:hover a {
     padding: 0.5rem 0;
     height: 25dvh;
   }
+}
+#menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#menu .buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 1.2rem;
+}
+#menu .buttons .btn {
+  height: 2rem;
+  width: 6rem;
+  background-color: #c8c5ac;
+  color: #9e693d;
+  border: 1px solid #9e693d;
+  border-radius: 2rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 3px 3px 5px 0px #9e693d;
+}
+#menu #food1,
+#menu #food2,
+#menu #drinks1,
+#menu #drinks2 {
+  height: fit-content;
+  width: 90%;
+  color: #9e693d;
+  border-top: 2px dashed #9e693d;
+  font-family: "Montserrat", sans-serif;
+  align-self: center;
+  margin-top: 1.5rem;
+  padding: 1.5rem 0.5rem 0 0.5rem;
+}
+#menu #food1 tr,
+#menu #food2 tr,
+#menu #drinks1 tr,
+#menu #drinks2 tr {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.3rem;
+}
+#menu #food2,
+#menu #drinks2 {
+  border-bottom: 2px dashed #9e693d;
+  padding-bottom: 1.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

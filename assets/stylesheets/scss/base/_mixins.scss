@@ -10,3 +10,24 @@
   flex-direction: $flex-direction;
   justify-content: $justify-content;
 }
+
+@mixin button {
+  @include heightAndWidth(2rem, 6rem);
+  background-color: #c8c5ac;
+  color: $title-background-color;
+  border: 1px solid $title-background-color;
+  border-radius: 2rem;
+  font-family: $text-font;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+@mixin card {
+  @include heightAndWidth(fit-content, 90%);
+  color: $title-background-color;
+  border-top: 2px dashed $title-background-color;
+  font-family: $text-font;
+  align-self: center;
+  margin-top: 1.5rem;
+  padding: 1.5rem 0.5rem 0 0.5rem;
+}

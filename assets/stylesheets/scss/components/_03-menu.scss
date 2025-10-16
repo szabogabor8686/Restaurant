@@ -1,2 +1,29 @@
 @use '../base/forward' as *;
 
+#menu {
+  @include makeItFlex;
+  .buttons {
+    @include makeItFlex(row, space-around);
+    margin-top: 1.2rem;
+
+    .btn {
+      @include button;
+      box-shadow: 3px 3px 5px 0px $title-background-color;
+    }
+  }
+  #food1,
+  #food2,
+  #drinks1,
+  #drinks2 {
+    @include card;
+    tr {
+      @include makeItFlex(row, space-between);
+      padding: 0.3rem;
+    }
+  }
+  #food2,
+  #drinks2 {
+    border-bottom: 2px dashed $title-background-color;
+    padding-bottom: 1.5rem;
+  }
+}
