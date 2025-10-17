@@ -192,6 +192,9 @@ header .menu-points li:hover a {
     padding: 0.5rem 0;
     height: 25dvh;
   }
+  #introduction p {
+    font-size: 1.1rem;
+  }
 }
 .buttons {
   display: flex;
@@ -209,6 +212,7 @@ header .menu-points li:hover a {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 1rem;
+  font-size: 1.1rem;
   box-shadow: 3px 3px 5px 0px #9e693d;
 }
 .buttons .btn:hover {
@@ -238,6 +242,7 @@ header .menu-points li:hover a {
   align-self: center;
   margin-top: 1.5rem;
   padding: 1.5rem 0.5rem 0 0.5rem;
+  font-size: 0.95rem;
 }
 .tables #food1 tr,
 .tables #food2 tr,
@@ -246,7 +251,7 @@ header .menu-points li:hover a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 0.3rem;
+  padding: 0.3rem 0;
 }
 .tables #food1 tr td.name,
 .tables #food2 tr td.name,
@@ -284,6 +289,7 @@ header .menu-points li:hover a {
   .tables #drinks1,
   .tables #drinks2 {
     width: 80%;
+    font-size: 1.1rem;
   }
   .tables #food1 tr,
   .tables #food2 tr,
