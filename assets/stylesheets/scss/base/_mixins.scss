@@ -13,7 +13,7 @@
 
 @mixin button {
   @include heightAndWidth(2rem, 6rem);
-  background-color: #c8c5ac;
+  background-color: $btn-background-color;
   color: $title-background-color;
   border: 1px solid $title-background-color;
   border-radius: 2rem;

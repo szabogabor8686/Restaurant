@@ -78,7 +78,7 @@ header p {
   align-self: center;
   font-family: "Italianno", cursive;
   font-weight: 800;
-  font-size: 2.4rem;
+  font-size: 2.3rem;
   color: #d1c894;
   margin-top: 0.3rem;
   cursor: pointer;
@@ -216,6 +216,13 @@ header .menu-points li:hover a {
   font-size: 1rem;
   box-shadow: 3px 3px 5px 0px #9e693d;
 }
+#menu .buttons .btn:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+#menu .buttons .btn.active {
+  background-color: #b9b596;
+}
 #menu #food1,
 #menu #food2,
 #menu #drinks1,
@@ -237,6 +244,12 @@ header .menu-points li:hover a {
   flex-direction: row;
   justify-content: space-between;
   padding: 0.3rem;
+}
+#menu #food1.passive,
+#menu #food2.passive,
+#menu #drinks1.passive,
+#menu #drinks2.passive {
+  display: none;
 }
 #menu #food2,
 #menu #drinks2 {

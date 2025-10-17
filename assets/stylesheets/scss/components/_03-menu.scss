@@ -1,4 +1,5 @@
 @use '../base/forward' as *;
+@use 'sass:color';
 
 #menu {
   @include makeItFlex;
@@ -9,6 +10,13 @@
     .btn {
       @include button;
       box-shadow: 3px 3px 5px 0px $title-background-color;
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+      }
+      &.active {
+        background-color: color.scale($btn-background-color, $lightness: -10%);
+      }
     }
   }
   #food1,
@@ -19,6 +27,9 @@
     tr {
       @include makeItFlex(row, space-between);
       padding: 0.3rem;
+    }
+    &.passive {
+      display: none;
     }
   }
   #food2,
