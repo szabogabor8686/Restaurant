@@ -193,18 +193,13 @@ header .menu-points li:hover a {
     height: 25dvh;
   }
 }
-#menu {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-#menu .buttons {
+.buttons {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   margin-top: 1.2rem;
 }
-#menu .buttons .btn {
+.buttons .btn {
   height: 2rem;
   width: 6rem;
   background-color: #c8c5ac;
@@ -216,17 +211,23 @@ header .menu-points li:hover a {
   font-size: 1rem;
   box-shadow: 3px 3px 5px 0px #9e693d;
 }
-#menu .buttons .btn:hover {
+.buttons .btn:hover {
   cursor: pointer;
   transform: scale(1.1);
 }
-#menu .buttons .btn.active {
+.buttons .btn.active {
   background-color: #b9b596;
 }
-#menu #food1,
-#menu #food2,
-#menu #drinks1,
-#menu #drinks2 {
+
+.tables {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.tables #food1,
+.tables #food2,
+.tables #drinks1,
+.tables #drinks2 {
   height: fit-content;
   width: 90%;
   color: #9e693d;
@@ -236,23 +237,23 @@ header .menu-points li:hover a {
   margin-top: 1.5rem;
   padding: 1.5rem 0.5rem 0 0.5rem;
 }
-#menu #food1 tr,
-#menu #food2 tr,
-#menu #drinks1 tr,
-#menu #drinks2 tr {
+.tables #food1 tr,
+.tables #food2 tr,
+.tables #drinks1 tr,
+.tables #drinks2 tr {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 0.3rem;
 }
-#menu #food1.passive,
-#menu #food2.passive,
-#menu #drinks1.passive,
-#menu #drinks2.passive {
+.tables #food1.passive,
+.tables #food2.passive,
+.tables #drinks1.passive,
+.tables #drinks2.passive {
   display: none;
 }
-#menu #food2,
-#menu #drinks2 {
+.tables #food2,
+.tables #drinks2 {
   border-bottom: 2px dashed #9e693d;
   padding-bottom: 1.5rem;
 }
