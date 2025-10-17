@@ -7,11 +7,11 @@ function renderMenu(data) {
   const secondPart = data.slice(20);
   firstPart.forEach((element) => {
     let randomPrice = Math.floor(Math.random() * (100 - 10) + 10) * 100;
-    row1 += `<tr><td>${element.name}</td><td>${randomPrice} Ft</td></tr>`;
+    row1 += `<tr><td class="name">${element.name}</td><td class="price">${randomPrice} Ft</td></tr>`;
   });
   secondPart.forEach((element) => {
     let randomPrice = Math.floor(Math.random() * (100 - 10) + 10) * 100;
-    row2 += `<tr><td>${element.name}</td><td>${randomPrice} Ft</td></tr>`;
+    row2 += `<tr><td class="name">${element.name}</td><td class="price">${randomPrice} Ft</td></tr>`;
   });
   menu1.innerHTML = row1;
   menu2.innerHTML = row2;
@@ -36,11 +36,11 @@ function renderDrinks(data) {
   const secondPart = data.slice(10);
   firstPart.forEach((element) => {
     let randomPrice = Math.floor(Math.random() * (150 - 60) + 60) * 10;
-    row1 += `<tr><td>${element.strIngredient1}</td><td>${randomPrice} Ft</td></tr>`;
+    row1 += `<tr><td class="name">${element.strIngredient1}</td><td class="price">${randomPrice} Ft</td></tr>`;
   });
   secondPart.forEach((element) => {
     let randomPrice = Math.floor(Math.random() * (150 - 60) + 60) * 10;
-    row2 += `<tr><td>${element.strIngredient1}</td><td>${randomPrice} Ft</td></tr>`;
+    row2 += `<tr><td class="name">${element.strIngredient1}</td><td class="price">${randomPrice} Ft</td></tr>`;
   });
   drinks1.innerHTML = row1;
   drinks2.innerHTML = row2;

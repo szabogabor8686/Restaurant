@@ -31,4 +31,8 @@ const backToFood = () => {
   });
 };
 
+document.addEventListener('DOMContentLoaded', () => {
+  foodBtn.disabled = true;
+});
+
 export { makeDrinksVisible, backToFood };
