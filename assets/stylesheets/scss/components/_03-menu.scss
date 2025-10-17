@@ -13,7 +13,7 @@
       transform: scale(1.1);
     }
     &.active {
-      background-color: color.scale($btn-background-color, $lightness: -10%);
+      background-color: color.scale($btn-background-color, $lightness: -15%);
     }
   }
 }
@@ -36,5 +36,27 @@
   #drinks2 {
     border-bottom: 2px dashed $title-background-color;
     padding-bottom: 1.5rem;
+  }
+}
+
+@media screen and (min-width: $large) {
+  .buttons {
+    margin-top: 2rem;
+    .btn {
+      width: 10rem;
+    }
+  }
+
+  .tables {
+    #food1,
+    #food2,
+    #drinks1,
+    #drinks2 {
+      width: 80%;
+      tr {
+        max-width: 60%;
+        margin: auto;
+      }
+    }
   }
 }

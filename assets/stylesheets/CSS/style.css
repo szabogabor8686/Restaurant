@@ -216,7 +216,7 @@ header .menu-points li:hover a {
   transform: scale(1.1);
 }
 .buttons .btn.active {
-  background-color: #b9b596;
+  background-color: #b2ae8a;
 }
 
 .tables {
@@ -256,6 +256,28 @@ header .menu-points li:hover a {
 .tables #drinks2 {
   border-bottom: 2px dashed #9e693d;
   padding-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .buttons {
+    margin-top: 2rem;
+  }
+  .buttons .btn {
+    width: 10rem;
+  }
+  .tables #food1,
+  .tables #food2,
+  .tables #drinks1,
+  .tables #drinks2 {
+    width: 80%;
+  }
+  .tables #food1 tr,
+  .tables #food2 tr,
+  .tables #drinks1 tr,
+  .tables #drinks2 tr {
+    max-width: 60%;
+    margin: auto;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
