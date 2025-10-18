@@ -229,6 +229,7 @@ header .menu-points li:hover a {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-top: 1.5rem;
 }
 .tables #food1,
 .tables #food2,
@@ -240,8 +241,7 @@ header .menu-points li:hover a {
   border-top: 2px dashed #9e693d;
   font-family: "Montserrat", sans-serif;
   align-self: center;
-  margin-top: 1.5rem;
-  padding: 1.5rem 0.5rem 0 0.5rem;
+  padding: 0.5rem;
   font-size: 0.95rem;
 }
 .tables #food1 tr,
@@ -274,7 +274,6 @@ header .menu-points li:hover a {
 .tables #food2,
 .tables #drinks2 {
   border-bottom: 2px dashed #9e693d;
-  padding-bottom: 1.5rem;
 }
 
 @media screen and (min-width: 768px) {

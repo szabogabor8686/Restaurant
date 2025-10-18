@@ -22,6 +22,7 @@
 }
 .tables {
   @include makeItFlex;
+  margin-top: 1.5rem;
   #food1,
   #food2,
   #drinks1,
@@ -47,7 +48,6 @@
   #food2,
   #drinks2 {
     border-bottom: 2px dashed $title-background-color;
-    padding-bottom: 1.5rem;
   }
 }
 
