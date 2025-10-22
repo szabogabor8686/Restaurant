@@ -1,3 +1,9 @@
+@use 'sass:color';
+
 $main-background-color: #d1c894;
 $title-background-color: #9e693d;
 $btn-background-color: #c8c5ac;
+$darker-title-background-color: color.scale(
+  $title-background-color,
+  $lightness: -40%
+);

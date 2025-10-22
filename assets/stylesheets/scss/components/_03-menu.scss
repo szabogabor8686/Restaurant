@@ -1,5 +1,4 @@
 @use '../base/forward' as *;
-@use 'sass:color';
 
 .buttons {
   @include makeItFlex(row, space-around);
