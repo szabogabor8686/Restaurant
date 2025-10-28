@@ -82,7 +82,7 @@ header .hamburger.active span:nth-child(3) {
   top: 50%;
   transform: translate(-50%, -50%) rotate(-45deg);
 }
-header p {
+header h1 {
   align-self: center;
   font-family: "Italianno", cursive;
   font-weight: 800;
@@ -133,7 +133,7 @@ header .menu-points li:hover a {
   header .hamburger {
     display: none;
   }
-  header p {
+  header h1 {
     font-size: 3rem;
   }
   header .menu-points {
@@ -213,24 +213,24 @@ header .menu-points li:hover a {
 .buttons .btn {
   height: 2rem;
   width: 6rem;
-  background-color: #c8c5ac;
+  background-color: #e4e2d6;
   color: #9e693d;
   border: 1px solid #9e693d;
   border-radius: 2rem;
+  box-shadow: 3px 3px 5px 0px #9e693d;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 1rem;
   font-size: 1.1rem;
-  box-shadow: 3px 3px 5px 0px #9e693d;
 }
 .buttons .btn:hover {
   cursor: pointer;
   transform: scale(1.1);
 }
 .buttons .btn.active {
-  color: #c8c5ac;
+  color: #e4e2d6;
   background-color: #9e693d;
-  border: 1px solid #c8c5ac;
+  border: 1px solid #e4e2d6;
 }
 
 .tables {
@@ -373,6 +373,63 @@ header .menu-points li:hover a {
 }
 .galery-and-reservation #galery .dots .active, .galery-and-reservation #galery .dots .dot:hover {
   background-color: #5f3f25;
+}
+
+#reservation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+}
+#reservation h3 {
+  text-align: center;
+  width: 60%;
+  border-bottom: 2px dashed #9e693d;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+#reservation form {
+  width: 80%;
+}
+#reservation form .form-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 1rem;
+}
+#reservation form .form-input input,
+#reservation form .form-input select,
+#reservation form .form-input textarea {
+  margin-top: 0.3rem;
+  padding: 0.2rem;
+  font-family: "Montserrat", sans-serif;
+  background-color: #e4e2d6;
+  resize: none;
+}
+#reservation form .form-input #date-and-time {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#reservation form button {
+  height: 2rem;
+  width: 6rem;
+  background-color: #e4e2d6;
+  color: #9e693d;
+  border: 1px solid #9e693d;
+  border-radius: 2rem;
+  box-shadow: 3px 3px 5px 0px #9e693d;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  display: block;
+  margin: 1rem auto;
+}
+#reservation form button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 /*# sourceMappingURL=style.css.map */

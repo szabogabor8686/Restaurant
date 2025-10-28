@@ -15,7 +15,7 @@
         <span></span>
       </nav>
       <img src="./assets/imgs/rice.jpg" alt="Rizsszem" />
-      <p href="#">La Rizses Hús</p>
+      <h1 href="#">La Rizses Hús</h1>
       <img src="./assets/imgs/meat.jpg" alt="Husi" />
       <div class="menu-points">
         <ul>
@@ -102,7 +102,64 @@
             <span class="dot"></span>
           </div>
         </section>
-        <section id="reservation"></section>
+        <section id="reservation">
+          <h3>Asztalfoglalás</h3>
+          <form autocomplete="on">
+            <div class="form-input">
+              <label for="name">Név:</label
+              ><input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-input">
+              <label for="phone-number">Telefonszám:</label
+              ><input
+                type="text"
+                id="phone-number"
+                name="phone-number"
+                required
+              />
+            </div>
+            <div class="form-input">
+              <label for="email">E-mail cím:</label
+              ><input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-input">
+              <label for="date">Dátum, időpont:</label>
+              <div id="date-and-time">
+                <input
+                  type="date"
+                  id="date"
+                  name="date"
+                  min="2025-10-28"
+                  required
+                />
+                <div>
+                  <select name="time-hour" id="time-hour" required></select>
+                  <select
+                    name="time-minutes"
+                    id="time-minutes"
+                    required
+                  ></select>
+                </div>
+              </div>
+            </div>
+            <div class="form-input">
+              <label for="number-of-persons">Személyek száma:</label
+              ><input
+                type="number"
+                id="number-of-persons"
+                name="number-of-persons"
+                min="1"
+                max="20"
+                required
+              />
+            </div>
+            <div class="form-input">
+              <label for="notes">Megjegyzés:</label
+              ><textarea name="notes" id="notes" rows="3"></textarea>
+            </div>
+            <button type="submit" id="submit">Foglalás</button>
+          </form>
+        </section>
       </div>
       <section id="contacts"></section>
     </main>

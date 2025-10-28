@@ -50,9 +50,9 @@ const nextSlide = () => {
 };
 
 const dotControl = () => {
-  for (let i = 1; i <= slides.length + 1; i++) {
-    dots[i - 1].addEventListener('click', () => {
-      showSlides(i);
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].addEventListener('click', () => {
+      showSlides(i - 1);
       restartSlideshow();
     });
   }
