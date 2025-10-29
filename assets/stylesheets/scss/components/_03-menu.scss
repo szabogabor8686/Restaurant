@@ -7,7 +7,6 @@
   .btn {
     @include button;
     font-size: 1.1rem;
-    box-shadow: 3px 3px 5px 0px $title-background-color;
     &:hover {
       cursor: pointer;
       transform: scale(1.1);
