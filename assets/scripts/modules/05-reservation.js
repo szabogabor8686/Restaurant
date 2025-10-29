@@ -57,6 +57,7 @@ const dateLimiter = () => {
 const timeSetter = () => {
   for (let i = 10; i < 22; i++) {
     const option = document.createElement('option');
+    option.setAttribute('value', i);
     option.innerText = i;
     hourInput.appendChild(option);
   }
@@ -67,6 +68,7 @@ const timeSetter = () => {
     } else {
       option.innerText = i * 15;
     }
+    option.setAttribute('value', i);
     minuteInput.appendChild(option);
   }
 };
@@ -74,7 +76,7 @@ const timeSetter = () => {
 const submit = () => {
   form.addEventListener('submit', () => {
     alert(
-      'Köszönjük a foglalást! Hamarosan visszaigazoljuk a megadott e-mail címre.'
+      'Köszönjük a foglalást! Hamarosan visszaigazolást küldünk e-mailben.'
     );
   });
 };

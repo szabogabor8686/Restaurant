@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Quintessential&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Italianno&family=Quintessential&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -84,7 +84,7 @@ header .hamburger.active span:nth-child(3) {
 }
 header h1 {
   align-self: center;
-  font-family: 'Italianno', cursive;
+  font-family: "Italianno", cursive;
   font-weight: 800;
   font-size: 2.3rem;
   color: #d1c894;
@@ -104,7 +104,7 @@ header .menu-points {
   left: -768px;
   text-align: center;
   font-size: 2.2rem;
-  font-family: 'Quintessential', serif;
+  font-family: "Quintessential", serif;
   transition: 0.3s ease;
   z-index: 998;
 }
@@ -172,7 +172,7 @@ header .menu-points li:hover a {
   justify-content: center;
   position: relative;
   padding: 0.3rem 0.2rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #9e693d;
 }
 #introduction h3 {
@@ -185,8 +185,7 @@ header .menu-points li:hover a {
   position: absolute;
   opacity: 60%;
   object-fit: cover;
-  animation: scaling-animation 3s cubic-bezier(0.4, 0, 0.18, 1) 100ms 1
-    alternate;
+  animation: scaling-animation 3s cubic-bezier(0.4, 0, 0.18, 1) 100ms 1 alternate;
   z-index: -1;
 }
 #introduction p {
@@ -219,7 +218,7 @@ header .menu-points li:hover a {
   border: 1px solid #9e693d;
   border-radius: 2rem;
   box-shadow: 3px 3px 5px 0px #9e693d;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 1rem;
   font-size: 1.1rem;
@@ -248,7 +247,7 @@ header .menu-points li:hover a {
   width: 90%;
   color: #9e693d;
   border-top: 2px dashed #9e693d;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   align-self: center;
   padding: 0.5rem;
   font-size: 0.95rem;
@@ -335,7 +334,7 @@ header .menu-points li:hover a {
   bottom: 0.5rem;
   width: 100%;
   text-align: center;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 .galery-and-reservation #galery .slides .prev,
 .galery-and-reservation #galery .slides .next {
@@ -372,18 +371,31 @@ header .menu-points li:hover a {
   display: inline-block;
   transition: background-color 0.6s ease;
 }
-.galery-and-reservation #galery .dots .active,
-.galery-and-reservation #galery .dots .dot:hover {
+.galery-and-reservation #galery .dots .active, .galery-and-reservation #galery .dots .dot:hover {
   background-color: #5f3f25;
 }
 
+@media screen and (min-width: 768px) {
+  .galery-and-reservation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .galery-and-reservation #galery {
+    width: 50%;
+    margin-top: 2rem;
+  }
+  .galery-and-reservation #galery .slides .slide img {
+    height: 30dvw;
+  }
+}
 #reservation {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 1.5rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 #reservation h3 {
   text-align: center;
@@ -406,8 +418,9 @@ header .menu-points li:hover a {
 #reservation form .form-input select,
 #reservation form .form-input textarea {
   margin-top: 0.3rem;
+  border: 1px solid black;
   padding: 0.2rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   background-color: #e4e2d6;
   resize: none;
 }
@@ -427,7 +440,7 @@ header .menu-points li:hover a {
   border: 1px solid #9e693d;
   border-radius: 2rem;
   box-shadow: 3px 3px 5px 0px #9e693d;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 1rem;
   display: block;
@@ -436,6 +449,41 @@ header .menu-points li:hover a {
 #reservation form button:hover {
   cursor: pointer;
   transform: scale(1.1);
+}
+
+@media screen and (min-width: 768px) {
+  #reservation {
+    width: 50%;
+  }
+  #reservation h3 {
+    width: 61%;
+  }
+  #reservation form {
+    width: 100%;
+    padding-left: 5rem;
+  }
+  #reservation form .form-input {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #reservation form .form-input input,
+  #reservation form .form-input textarea {
+    margin-top: 1.8dvw;
+    width: 70%;
+  }
+  #reservation form .form-input label,
+  #reservation form .form-input select {
+    margin-top: 1.8dvw;
+    padding: 0.2rem 0rem;
+  }
+  #reservation form .form-input #date-and-time #date {
+    width: auto;
+    margin-right: 2rem;
+  }
+  #reservation form .form-input #number-of-persons {
+    width: 11.5%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

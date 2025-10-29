@@ -68,3 +68,20 @@
     }
   }
 }
+
+@media screen and (min-width: $large) {
+  .galery-and-reservation {
+    @include makeItFlex(row, space-between);
+    #galery {
+      width: 50%;
+      margin-top: 2rem;
+      .slides {
+        .slide {
+          img {
+            height: 30dvw;
+          }
+        }
+      }
+    }
+  }
+}
