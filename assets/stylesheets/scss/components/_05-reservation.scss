@@ -7,6 +7,7 @@
   font-family: $text-font;
   h3 {
     text-align: center;
+    padding-bottom: 0.3rem;
     width: 60%;
     border-bottom: 2px dashed $title-background-color;
     margin-bottom: 1rem;
@@ -28,6 +29,9 @@
       }
       #date-and-time {
         @include makeItFlex(row, space-between);
+        #date {
+          padding-right: 1.1rem;
+        }
       }
     }
     button {

@@ -385,6 +385,7 @@ header .menu-points li:hover a {
 }
 #reservation h3 {
   text-align: center;
+  padding-bottom: 0.3rem;
   width: 60%;
   border-bottom: 2px dashed #9e693d;
   margin-bottom: 1rem;
@@ -412,6 +413,9 @@ header .menu-points li:hover a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+#reservation form .form-input #date-and-time #date {
+  padding-right: 1.1rem;
 }
 #reservation form button {
   height: 2rem;
