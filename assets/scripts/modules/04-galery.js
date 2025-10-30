@@ -52,7 +52,7 @@ const nextSlide = () => {
 const dotControl = () => {
   for (let i = 0; i < dots.length; i++) {
     dots[i].addEventListener('click', () => {
-      showSlides(i - 1);
+      showSlides(i + 1);
       restartSlideshow();
     });
   }
