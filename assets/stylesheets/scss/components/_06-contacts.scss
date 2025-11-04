@@ -1,0 +1,53 @@
+@use '../base/forward' as *;
+
+#contacts {
+  @include makeItFlex();
+  margin-top: 1rem;
+  align-items: center;
+  .info {
+    @include makeItFlex();
+    table {
+      @include card();
+      margin-top: 1rem;
+      caption {
+        font-weight: 600;
+        font-size: larger;
+        padding-bottom: 0.3rem;
+      }
+      tbody {
+        margin-top: 1rem;
+        display: block;
+        tr {
+          @include makeItFlex(row, space-between);
+          padding: 0.3rem 0;
+          font-weight: 500;
+          #closed {
+            padding: 0 1.7rem;
+          }
+          #adress {
+            padding-left: 2rem;
+          }
+          td {
+            a {
+              text-decoration: none;
+              color: inherit;
+              display: inline-block;
+              &:hover {
+                transform: scale(1.1);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .map {
+    margin-top: 1rem;
+    @include heightAndWidth(30dvh, 95%);
+    iframe {
+      @include heightAndWidth(100%);
+      border: 1px solid $title-background-color;
+      border-right: 2px solid $title-background-color;
+    }
+  }
+}

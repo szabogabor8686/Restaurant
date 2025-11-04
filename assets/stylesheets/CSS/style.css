@@ -396,6 +396,7 @@ header .menu-points li:hover a {
   align-items: center;
   margin-top: 1.5rem;
   font-family: "Montserrat", sans-serif;
+  color: #9e693d;
 }
 #reservation h3 {
   text-align: center;
@@ -413,16 +414,24 @@ header .menu-points li:hover a {
   flex-direction: column;
   justify-content: center;
   padding-top: 1rem;
+  font-weight: 500;
 }
 #reservation form .form-input input,
 #reservation form .form-input select,
 #reservation form .form-input textarea {
   margin-top: 0.3rem;
-  border: 1px solid black;
+  border: 1px solid #9e693d;
   padding: 0.2rem;
   font-family: "Montserrat", sans-serif;
   background-color: #e4e2d6;
   resize: none;
+  color: #9e693d;
+  outline: none;
+}
+#reservation form .form-input input:focus,
+#reservation form .form-input select:focus,
+#reservation form .form-input textarea:focus {
+  border: 2px solid #9e693d;
 }
 #reservation form .form-input #date-and-time {
   display: flex;
@@ -431,6 +440,14 @@ header .menu-points li:hover a {
 }
 #reservation form .form-input #date-and-time #date {
   padding-right: 1.1rem;
+  color: inherit;
+}
+#reservation form .form-input #date-and-time #date::-webkit-calendar-picker-indicator {
+  filter: brightness(0) saturate(100%) invert(54%) sepia(7%) saturate(3315%) hue-rotate(345deg) brightness(80%) contrast(92%);
+}
+#reservation form .form-input #number-of-persons::-webkit-outer-spin-button,
+#reservation form .form-input #number-of-persons::-webkit-inner-spin-button {
+  filter: sepia(1);
 }
 #reservation form button {
   height: 2rem;
@@ -484,6 +501,69 @@ header .menu-points li:hover a {
   #reservation form .form-input #number-of-persons {
     width: 11.5%;
   }
+}
+#contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 1rem;
+  align-items: center;
+}
+#contacts .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#contacts .info table {
+  height: fit-content;
+  width: 90%;
+  color: #9e693d;
+  border-top: 2px dashed #9e693d;
+  font-family: "Montserrat", sans-serif;
+  align-self: center;
+  padding: 0.5rem;
+  margin-top: 1rem;
+}
+#contacts .info table caption {
+  font-weight: 600;
+  font-size: larger;
+  padding-bottom: 0.3rem;
+}
+#contacts .info table tbody {
+  margin-top: 1rem;
+  display: block;
+}
+#contacts .info table tbody tr {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.3rem 0;
+  font-weight: 500;
+}
+#contacts .info table tbody tr #closed {
+  padding: 0 1.7rem;
+}
+#contacts .info table tbody tr #adress {
+  padding-left: 2rem;
+}
+#contacts .info table tbody tr td a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+#contacts .info table tbody tr td a:hover {
+  transform: scale(1.1);
+}
+#contacts .map {
+  margin-top: 1rem;
+  height: 30dvh;
+  width: 95%;
+}
+#contacts .map iframe {
+  height: 100%;
+  width: 100%;
+  border: 1px solid #9e693d;
+  border-right: 2px solid #9e693d;
 }
 
 /*# sourceMappingURL=style.css.map */

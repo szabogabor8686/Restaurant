@@ -19,7 +19,7 @@
   }
 }
 .tables {
-  @include makeItFlex;
+  @include makeItFlex();
   margin-top: 1.5rem;
   #food1,
   #food2,

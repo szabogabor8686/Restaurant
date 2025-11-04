@@ -31,7 +31,7 @@ function restartSlideshow(delay = 3000) {
     intervalID = setInterval(() => {
       slideIndex++;
       showSlides(slideIndex);
-    }, 3000);
+    }, 4000);
   }, delay);
 }
 
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
   intervalID = setInterval(() => {
     slideIndex++;
     showSlides(slideIndex);
-  }, 3000);
+  }, 4000);
 });
 
 export { prevSlide, nextSlide, dotControl };
