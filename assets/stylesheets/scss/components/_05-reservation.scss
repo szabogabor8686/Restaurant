@@ -55,7 +55,7 @@
     button {
       @include button();
       display: block;
-      margin: 1rem auto;
+      margin: 1.5rem auto;
       &:hover {
         cursor: pointer;
         transform: scale(1.1);
@@ -72,7 +72,7 @@
     }
     form {
       width: 100%;
-      padding-left: 5rem;
+      padding: 0 2rem;
       .form-input {
         @include makeItFlex(row, space-between);
         input,
@@ -86,9 +86,12 @@
           padding: 0.2rem 0rem;
         }
         #date-and-time {
+          flex-wrap: wrap;
           #date {
             width: auto;
             margin-right: 2rem;
+            padding-right: 0;
+            max-height: min-content;
           }
         }
         #number-of-persons {

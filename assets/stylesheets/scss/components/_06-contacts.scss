@@ -2,7 +2,7 @@
 
 #contacts {
   @include makeItFlex();
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   align-items: center;
   .info {
     @include makeItFlex();
@@ -46,10 +46,31 @@
   }
   .map {
     margin-top: 1rem;
-    @include heightAndWidth(30dvh, 95%);
+    @include heightAndWidth(35dvh, 95%);
     iframe {
       @include heightAndWidth(100%);
       border: 1px solid $title-background-color;
+    }
+  }
+}
+
+@media screen and (min-width: $large) {
+  #contacts {
+    flex-direction: row;
+    .info {
+      width: 50%;
+      table {
+        width: 80%;
+        align-self: center;
+        tbody {
+          width: 70%;
+          justify-self: center;
+        }
+      }
+    }
+    .map {
+      margin-top: 0.5rem;
+      @include heightAndWidth(48dvh, 50%);
     }
   }
 }
