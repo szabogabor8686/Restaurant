@@ -513,21 +513,18 @@ header .menu-points li:hover a {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 80%;
 }
 #contacts .info table {
-  height: fit-content;
-  width: 90%;
   color: #9e693d;
-  border-top: 2px dashed #9e693d;
   font-family: "Montserrat", sans-serif;
-  align-self: center;
-  padding: 0.5rem;
   margin-top: 1rem;
 }
 #contacts .info table caption {
   font-weight: 600;
   font-size: larger;
   padding-bottom: 0.3rem;
+  border-bottom: 2px dashed #9e693d;
 }
 #contacts .info table tbody {
   margin-top: 1rem;
@@ -563,7 +560,6 @@ header .menu-points li:hover a {
   height: 100%;
   width: 100%;
   border: 1px solid #9e693d;
-  border-right: 2px solid #9e693d;
 }
 
 /*# sourceMappingURL=style.css.map */

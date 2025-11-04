@@ -6,13 +6,16 @@
   align-items: center;
   .info {
     @include makeItFlex();
+    width: 80%;
     table {
-      @include card();
+      color: $title-background-color;
+      font-family: $text-font;
       margin-top: 1rem;
       caption {
         font-weight: 600;
         font-size: larger;
         padding-bottom: 0.3rem;
+        border-bottom: 2px dashed $title-background-color;
       }
       tbody {
         margin-top: 1rem;
@@ -47,7 +50,6 @@
     iframe {
       @include heightAndWidth(100%);
       border: 1px solid $title-background-color;
-      border-right: 2px solid $title-background-color;
     }
   }
 }
