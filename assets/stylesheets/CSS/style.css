@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Italianno&family=Quintessential&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
@@ -587,6 +588,68 @@ header .menu-points li:hover a {
     height: 48dvh;
     width: 50%;
   }
+}
+footer {
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 1.5rem;
+  background-color: #9e693d;
+  box-shadow: 0px -5px 10px 0px #9e693d;
+  font-family: "Quintessential", serif;
+  color: #d1c894;
+  font-weight: 500;
+}
+footer > p {
+  width: 30%;
+  font-size: larger;
+}
+footer .linkedin {
+  width: 15%;
+  position: relative;
+  z-index: 1;
+}
+footer .linkedin:hover {
+  transform: scale(1.1);
+}
+footer .linkedin .background {
+  position: absolute;
+  top: 0.6rem;
+  left: 0.6rem;
+  height: 55%;
+  width: 65%;
+  max-width: 2rem;
+  background-color: #d1c894;
+  z-index: -1;
+}
+footer .linkedin svg {
+  max-height: 3rem;
+}
+footer .source {
+  width: 40%;
+}
+footer .source a {
+  text-decoration: none;
+  color: #d1c894;
+  display: inline-block;
+}
+footer .source a:hover {
+  transform: scale(1.1);
+}
+footer .source summary {
+  display: block;
+}
+footer .source summary::after {
+  margin-left: 1ch;
+  display: inline-block;
+  content: ">Részletek<";
+  transition: 0.2s;
+}
+footer .source ul {
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=style.css.map */
