@@ -603,17 +603,19 @@ footer {
   color: #d1c894;
   font-weight: 500;
 }
-footer > p {
-  width: 30%;
+footer .footer-text {
+  padding-left: 0.5rem;
+  width: 40%;
   font-size: larger;
 }
 footer .linkedin {
-  width: 15%;
+  width: 20%;
   position: relative;
   z-index: 1;
 }
 footer .linkedin:hover {
-  transform: scale(1.1);
+  scale: 1.1;
+  translate: 0.1rem;
 }
 footer .linkedin .background {
   position: absolute;
@@ -647,9 +649,29 @@ footer .source summary::after {
   display: inline-block;
   content: ">Részletek<";
   transition: 0.2s;
+  cursor: pointer;
 }
 footer .source ul {
   text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+  footer .footer-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 1rem;
+  }
+  footer .linkedin {
+    width: 5%;
+  }
+  footer .source p {
+    display: inline-block;
+    padding-right: 1.2rem;
+  }
+  footer .source details {
+    display: inline-block;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

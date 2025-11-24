@@ -10,16 +10,18 @@ footer {
   font-family: $menu-font;
   color: $main-background-color;
   font-weight: 500;
-  & > p {
-    width: 30%;
+  .footer-text {
+    padding-left: 0.5rem;
+    width: 40%;
     font-size: larger;
   }
   .linkedin {
-    width: 15%;
+    width: 20%;
     position: relative;
     z-index: 1;
     &:hover {
-      transform: scale(1.1);
+      scale: 1.1;
+      translate: 0.1rem;
     }
     .background {
       position: absolute;
@@ -51,10 +53,32 @@ footer {
         display: inline-block;
         content: '>Részletek<';
         transition: 0.2s;
+        cursor: pointer;
       }
     }
     ul {
       text-decoration: none;
+    }
+  }
+}
+
+@media screen and (min-width: $large) {
+  footer {
+    .footer-text {
+      @include makeItFlex(row, space-around);
+      margin-left: 1rem;
+    }
+    .linkedin {
+      width: 5%;
+    }
+    .source {
+      p {
+        display: inline-block;
+        padding-right: 1.2rem;
+      }
+      details {
+        display: inline-block;
+      }
     }
   }
 }
