@@ -46,6 +46,9 @@
               saturate(3315%) hue-rotate(345deg) brightness(80%) contrast(92%);
           }
         }
+        #time-hour {
+          padding: 0.2rem 0.8rem;
+        }
       }
       #number-of-persons::-webkit-outer-spin-button,
       #number-of-persons::-webkit-inner-spin-button {
@@ -83,7 +86,6 @@
         label,
         select {
           margin-top: 1.8dvw;
-          padding: 0.2rem 0rem;
         }
         #date-and-time {
           flex-wrap: wrap;

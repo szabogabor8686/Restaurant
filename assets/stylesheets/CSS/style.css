@@ -446,6 +446,9 @@ header .menu-points li:hover a {
 #reservation form .form-input #date-and-time #date::-webkit-calendar-picker-indicator {
   filter: brightness(0) saturate(100%) invert(54%) sepia(7%) saturate(3315%) hue-rotate(345deg) brightness(80%) contrast(92%);
 }
+#reservation form .form-input #date-and-time #time-hour {
+  padding: 0.2rem 0.8rem;
+}
 #reservation form .form-input #number-of-persons::-webkit-outer-spin-button,
 #reservation form .form-input #number-of-persons::-webkit-inner-spin-button {
   filter: sepia(1);
@@ -493,7 +496,6 @@ header .menu-points li:hover a {
   #reservation form .form-input label,
   #reservation form .form-input select {
     margin-top: 1.8dvw;
-    padding: 0.2rem 0rem;
   }
   #reservation form .form-input #date-and-time {
     flex-wrap: wrap;

@@ -55,20 +55,33 @@ const dateLimiter = () => {
 };
 
 const timeSetter = () => {
-  for (let i = 10; i < 22; i++) {
-    const option = document.createElement('option');
-    option.setAttribute('value', i);
-    option.innerText = i;
-    hourInput.appendChild(option);
-  }
+  let availableHours;
+  dateInput.addEventListener('change', () => {
+    hourInput.innerHTML = '<option value=""></option>';
+    const pickedDate = new Date(dateInput.value + 'T00:00:00');
+    if (pickedDate.getDay() === 0) {
+      availableHours = 20;
+      hourInput.style.padding = '0.2rem 0.38rem';
+    } else {
+      availableHours = 22;
+      hourInput.style.padding = '0.2rem 0.26rem';
+    }
+    for (let i = 10; i < availableHours; i++) {
+      const option = document.createElement('option');
+      option.setAttribute('value', i);
+      option.innerText = i;
+      hourInput.appendChild(option);
+    }
+  });
   for (let i = 0; i < 4; i++) {
     const option = document.createElement('option');
     if (i === 0) {
       option.innerText = `00`;
+      option.setAttribute('value', '00');
     } else {
       option.innerText = i * 15;
+      option.setAttribute('value', i * 15);
     }
-    option.setAttribute('value', i);
     minuteInput.appendChild(option);
   }
 };
