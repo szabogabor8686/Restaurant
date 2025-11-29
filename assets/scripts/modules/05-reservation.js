@@ -5,6 +5,7 @@ const dateInput = document.getElementById('date');
 const hourInput = document.getElementById('time-hour');
 const minuteInput = document.getElementById('time-minutes');
 const form = document.querySelector('form');
+let validDate = true;
 
 const nameChecker = () => {
   nameInput.addEventListener('input', (event) => {
@@ -57,11 +58,17 @@ const dateLimiter = () => {
 const timeSetter = () => {
   let availableHours;
   dateInput.addEventListener('change', () => {
+    if (dateInput.value < dateInput.min || dateInput.value > dateInput.max) {
+      validDate = false;
+    }
     hourInput.innerHTML = '<option value=""></option>';
     const pickedDate = new Date(dateInput.value + 'T00:00:00');
     if (pickedDate.getDay() === 0) {
       availableHours = 20;
       hourInput.style.padding = '0.2rem 0.38rem';
+    } else if (pickedDate.getDay() === 3 || !validDate) {
+      availableHours = 10;
+      hourInput.style.padding = '0.2rem 0.8rem';
     } else {
       availableHours = 22;
       hourInput.style.padding = '0.2rem 0.26rem';
