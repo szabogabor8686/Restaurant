@@ -607,30 +607,32 @@ footer {
 }
 footer .footer-text {
   padding-left: 0.5rem;
-  width: 40%;
+  width: 30%;
   font-size: larger;
 }
-footer .linkedin {
+footer .social {
   width: 20%;
-  position: relative;
-  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
-footer .linkedin:hover {
-  scale: 1.1;
-  translate: 0.1rem;
+footer .social .linkedin,
+footer .social .github {
+  width: 50%;
 }
-footer .linkedin .background {
-  position: absolute;
-  top: 0.6rem;
-  left: 0.6rem;
-  height: 55%;
-  width: 65%;
-  max-width: 2rem;
-  background-color: #d1c894;
-  z-index: -1;
-}
-footer .linkedin svg {
+footer .social .linkedin svg,
+footer .social .github svg {
   max-height: 3rem;
+}
+footer .social .linkedin svg .background,
+footer .social .github svg .background {
+  fill: #d1c894;
+  height: 60%;
+  width: 54%;
+}
+footer .social .linkedin svg:hover,
+footer .social .github svg:hover {
+  scale: 1.1;
 }
 footer .source {
   width: 40%;
@@ -663,9 +665,6 @@ footer .source ul {
     flex-direction: row;
     justify-content: space-around;
     margin-left: 1rem;
-  }
-  footer .linkedin {
-    width: 5%;
   }
   footer .source p {
     display: inline-block;

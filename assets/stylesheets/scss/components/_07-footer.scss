@@ -12,28 +12,25 @@ footer {
   font-weight: 500;
   .footer-text {
     padding-left: 0.5rem;
-    width: 40%;
+    width: 30%;
     font-size: larger;
   }
-  .linkedin {
+  .social {
     width: 20%;
-    position: relative;
-    z-index: 1;
-    &:hover {
-      scale: 1.1;
-      translate: 0.1rem;
-    }
-    .background {
-      position: absolute;
-      top: 0.6rem;
-      left: 0.6rem;
-      @include heightAndWidth(55%, 65%);
-      max-width: 2rem;
-      background-color: $main-background-color;
-      z-index: -1;
-    }
-    svg {
-      max-height: 3rem;
+    @include makeItFlex(row, space-between);
+    .linkedin,
+    .github {
+      width: 50%;
+      svg {
+        max-height: 3rem;
+        .background {
+          fill: $main-background-color;
+          @include heightAndWidth(60%, 54%);
+        }
+        &:hover {
+          scale: 1.1;
+        }
+      }
     }
   }
   .source {
@@ -67,9 +64,6 @@ footer {
     .footer-text {
       @include makeItFlex(row, space-around);
       margin-left: 1rem;
-    }
-    .linkedin {
-      width: 5%;
     }
     .source {
       p {
